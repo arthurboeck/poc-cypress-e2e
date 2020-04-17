@@ -1,0 +1,16 @@
+{
+    "video": false,
+    "viewportHeight": 768,
+    "viewportWidth": 1366,
+    "pageLoadTimeout": 600000,
+    "responseTimeout": 600000,
+    "defaultCommandTimeout": 100000,
+    "chromeWebSecurity": false,
+    "clearCookies": false,
+    "clearLocalStorage": false,
+    "clearSessionStorage": false,
+    "host":"https://www.grocerycrud.com/demo/bootstrap_theme_v4/",
+    "blacklistHosts": [
+        "*fonts.googleapis.com"
+    ]
+}
