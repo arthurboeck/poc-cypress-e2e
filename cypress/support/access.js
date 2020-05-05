@@ -18,6 +18,4 @@ Cypress.Commands.add('accessPage', () => {
             win.localStorage.clear()
         }
     });
-
-    cy.get('.btn-primary')
 })

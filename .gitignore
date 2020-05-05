@@ -3,3 +3,4 @@ node_modules
 package-lock.json
 cypress/screenshots/**
 node_modules
+debug.log

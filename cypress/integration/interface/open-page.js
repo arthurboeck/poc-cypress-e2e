@@ -1,5 +1,8 @@
-
+import { routePostCustomer, } from "../../base-tests/routes";
 describe('Open Application', () => {
+
+    const faker = require('faker');
+    faker.locale = "pt_BR";
 
     beforeEach(() => {
         cy.consoleErrosOff();
@@ -10,8 +13,24 @@ describe('Open Application', () => {
     })
 
     it('Open Application - Costumer Edit', () => {
+
         cy.accessPage()
-        cy.get(':nth-child(1) > :nth-child(2) > .only-desktops > a.btn').click()
+        cy.clickFirstLine()
+        cy.get('input[id="field-customerName"]').clear().type(faker.name.findName())
+        cy.get('input[id="field-contactLastName"]').clear().type(faker.name.lastName())
+        cy.get('input[id="field-contactFirstName"]').clear().type(faker.name.findName())
+        cy.get('input[id="field-phone"]').clear().type(faker.phone.phoneNumber())
+        
+        cy.get('[id="form-button-save"]').click()
+
+        // cy.server()
+        // cy.route('POST', routePostCustomer).as('postCustomer')
+        // cy.wait('@postCustomer')
+        // cy.get('@postCustomer').then((xhr) => {
+        //     expect(xhr.method).to.eq('POST')
+        // })
+
+        cy.get('[id="report-success"]').should('be.visible')
     })
 
     it('Open Application - Costumer Create', () => {

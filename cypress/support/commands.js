@@ -32,3 +32,7 @@ Cypress.Commands.add('consoleErrosOff', () => {
     })
 })
 
+Cypress.Commands.add('clickFirstLine',() => {
+    cy.get(':nth-child(1) > :nth-child(2) > .only-desktops > a.btn').click()
+})
+
