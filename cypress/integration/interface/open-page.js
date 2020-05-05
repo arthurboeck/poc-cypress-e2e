@@ -23,12 +23,13 @@ describe('Open Application', () => {
         
         cy.get('[id="form-button-save"]').click()
 
-        // cy.server()
-        // cy.route('POST', routePostCustomer).as('postCustomer')
-        // cy.wait('@postCustomer')
-        // cy.get('@postCustomer').then((xhr) => {
-        //     expect(xhr.method).to.eq('POST')
-        // })
+        cy.server()
+        cy.route('POST', routePostCustomer).as('postCustomer')
+        cy.wait('@postCustomer')
+        cy.get('@postCustomer').then((xhr) => {
+            expect(xhr.method).to.eq('POST')
+            expect(xhr.status).to.eq(200)
+        })
 
         cy.get('[id="report-success"]').should('be.visible')
     })
