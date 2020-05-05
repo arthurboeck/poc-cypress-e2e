@@ -24,9 +24,8 @@ jobs:
         with:
           node-version: 12
       - name: Install & Build
-      - run:
-        npm ci
-        npm run build
+      - run: npm ci
+      - run: npm run build
 
   Test:
     name: Cypress Test
