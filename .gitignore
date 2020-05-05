@@ -1,5 +1,7 @@
 node_modules
 .vscode
 package-lock.json
+cypress/screenshots/**
+cypress/videos/**
 node_modules
 debug
