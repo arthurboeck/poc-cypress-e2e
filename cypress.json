@@ -1,5 +1,5 @@
 {
-    "video": false,
+    "video": true,
     "viewportHeight": 768,
     "viewportWidth": 1366,
     "pageLoadTimeout": 600000,
