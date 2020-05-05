@@ -28,6 +28,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
+      - name: Npm Installin
+        run: npm install --package-lock
+
       # because of "record" and "parallel" parameters
       # these containers will load balance all found tests among themselves
       - name: Cypress Run
@@ -39,13 +42,14 @@ jobs:
           browser: chrome
 
       # Upload videos and screenshots as artifacts
-      - name: Upload Artifacts
+      - name: Upload Image Artifacts
         uses: actions/upload-artifact@v1
         if: failure()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
-      - uses: actions/upload-artifact@v1
+      - name: Upload Video Artifacts
+        uses: actions/upload-artifact@v1
         if: always()
         with:
           name: cypress-videos
