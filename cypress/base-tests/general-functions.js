@@ -1,7 +1,7 @@
-// FUNCOES GENERICAS
+// GENERIC FUNCTIONS
 
-//Formatar valor monetario
-export function numberFormat(num) {
+//Format currency
+export function currencyFormat(num) {
     return (
     num
         .toFixed(2)
@@ -10,8 +10,8 @@ export function numberFormat(num) {
     )
 }
 
-//Formatar cpf/cnpj sem mascara
-export function documentoFormat(documento){
+//Format CPF/CNPJ - BRAZIL ONLY
+export function documentFormat(documento){
  
     //Remove tudo o que não é dígito
     documento = documento.replace(/\D/g,"")
@@ -43,7 +43,7 @@ export function documentoFormat(documento){
     return documento
 }
 
-//Obtem o bearer token da aplicação
+//Get aplication bearer token
 export function getTokenId() {
     return localStorage.getItem('access_token')
 }
