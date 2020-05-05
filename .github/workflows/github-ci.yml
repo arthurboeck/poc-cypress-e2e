@@ -11,41 +11,20 @@ on:
       - master
 
 jobs:
-  Install:
-    name: Install NPM and Cypress
+
+  build:
+
     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@master
-      - name: Use Node.js v12
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - name: Install & Build
-        run: npm install
-
-  Test:
-    name: Cypress Test
-    runs-on: ubuntu-latest
-    needs: install
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
 
     steps:
-      - uses: actions/checkout@master
-      - name: Use Node.js v12
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - name: Cypress Tests Run
-        run: |
-          # npx cypress run --browser chrome
-          npx cypress run --record --parallel
-      - name: Artifact Generate
-      - uses: actions/upload-artifact@master
-        if: failure()
-        with:
-          name: screenshots
-          path: cypress/screenshots
-      - uses: actions/upload-artifact@master
-        with:
-          name: videos
-          path: cypress/videos
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm install
