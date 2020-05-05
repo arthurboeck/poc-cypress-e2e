@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Atualizando dependencias"
+echo "Updating Dependencies"
 npm install
-echo "Rodando os testes"
+echo "Running Tests"
 cypress run --browser chrome
