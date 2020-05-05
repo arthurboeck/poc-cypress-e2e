@@ -23,53 +23,31 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: install dependencies and verify Cypress
-        env:
-          # make sure every Cypress install prints minimal information
-          CI: 1
-        run: |
-          npm ci
-          npx cypress cache path
-          npx cypress cache list
-          npx cypress verify
-          npx cypress info
-  # Duplicate job definitions - GitHub YAML does not support
-  # anchor definitions yet, thus we cannot put same steps into a template object yet
-  test1:
-    name: Cypress test 1
+      - name: Install & Build
+      - run:
+        npm ci
+        npm run build --if-present
+
+  Test:
+    name: Cypress Test
     runs-on: ubuntu-16.04
     needs: install
     steps:
       - uses: actions/checkout@master
-
-      # install a specific version of Node using
-      # https://github.com/actions/setup-node
       - name: Use Node.js v12
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      # Starts local server, then runs Cypress tests and records results on the dashboard
-      - name: Cypress tests
+      - name: Cypress Tests Run
         run: |
           npm start &
-          npx cypress run --record --parallel --group
-        env:
-          # place your secret record key at
-          # https://github.com/cypress-io/cypress-example-kitchensink/settings/secrets
-          CYPRESS_RECORD_KEY: ${{ secrets.dashboardRecordKey }}
-          TERM: xterm
-
-      # Save videos and screenshots as test artifacts
-      # https://github.com/actions/upload-artifact
+          npx cypress run --record --parallel
+      - name: Artifact Generate
       - uses: actions/upload-artifact@master
-        # there might be no screenshots created when:
-        # - there are no test failures
-        # so only upload screenshots if previous step has failed
         if: failure()
         with:
           name: screenshots
           path: cypress/screenshots
-      # video should always be generated
       - uses: actions/upload-artifact@master
         with:
           name: videos
