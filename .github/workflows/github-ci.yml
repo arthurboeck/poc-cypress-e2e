@@ -37,7 +37,7 @@ jobs:
           node-version: 12
       - name: Cypress Tests Run
         run: |
-          npm start &
+          # npx cypress run --browser chrome
           npx cypress run --record --parallel
       - name: Artifact Generate
       - uses: actions/upload-artifact@master
