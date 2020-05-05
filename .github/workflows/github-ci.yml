@@ -27,8 +27,6 @@ jobs:
       - name: Cypress Run
         uses: cypress-io/github-action@v1
         with:
-          record: true
-          parallel: true
           browser: chrome
 
       # Upload videos and screenshots as artifacts
@@ -38,6 +36,7 @@ jobs:
         with:
           name: cypress-screenshots
           path: cypress/screenshots
+
       - name: Upload Video Artifacts
         uses: actions/upload-artifact@v1
         if: always()
