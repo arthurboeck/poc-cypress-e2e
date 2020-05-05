@@ -8,20 +8,19 @@ describe('Services Get', () => {
         cy.consoleErrosOff();
     });
 
-    it('Get jobs', () => {
+    it('Get Jobs List', () => {
 
         cy.server()
-        cy.request(routeGetJobs).as('getJobs')
-        cy.get('@getJobs').then((xhr) => {
-            expect(xhr.method).to.eq('GET')
-            expect(xhr.status).to.eq(200)
+        cy.request('GET', routeGetJobs).as('getJobs')
+        cy.get('@getJobs').then((response) => { 
+            expect(response.status).to.eq(200)
 
-            let idJob = (xhr.response.body.uuid)
+            let idJob = response.body[2].uuid
 
             cy.server()
             cy.request({
             method: 'GET', 
-            url: routeGetJobs+idJob,
+            url: routeGetJobs+"/"+idJob,
             // auth:{ -- Parameter used to set bearer token
             //     bearer:getTokenId()
             // }
