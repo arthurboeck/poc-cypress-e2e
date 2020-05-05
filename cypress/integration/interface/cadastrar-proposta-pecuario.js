@@ -9,7 +9,7 @@ describe('Open Application', () => {
     });
 
     // CENARIO 01 PF
-    it('Open Application', () => {
+    it.skip('Open Application', () => {
         cy.access()
         cy.acessarAgroMais()
 

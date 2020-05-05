@@ -11,7 +11,7 @@ describe('Cadastrar Proposta Agrícola', () => {
     });
 
     // CENARIO 01 PF
-    it('Cadastrar Proposta Agrícola - Produtor PF N Coops - Seguro Pro Agro', () => {
+    it.skip('Cadastrar Proposta Agrícola - Produtor PF N Coops - Seguro Pro Agro', () => {
         cy.acessoLogin(usuarioACR.username, usuarioACR.password)
         cy.acessarAgroMais()
         
@@ -72,7 +72,7 @@ describe('Cadastrar Proposta Agrícola', () => {
     })
 
     // CENARIO 02 PF
-    it('Cadastrar Proposta Agrícola - Produtor PF N Coopsf - Seguro OMS', () => {
+    it.skip('Cadastrar Proposta Agrícola - Produtor PF N Coopsf - Seguro OMS', () => {
         cy.acessarAgroMais()
 
         const vlrFinanciadoHA = parseFloat(dadosPropVlrFinanciado) / parseFloat(dadosPropAgricola.areaBeneficiada)
@@ -129,7 +129,7 @@ describe('Cadastrar Proposta Agrícola', () => {
     })
 
     // CENARIO 03 PJ
-    it('Cadastrar Proposta Agrícola - Produtor PJ Coop Unica - Seguro Pro Agro', () => {
+    it.skip('Cadastrar Proposta Agrícola - Produtor PJ Coop Unica - Seguro Pro Agro', () => {
         cy.acessarAgroMais()
 
         const vlrFinanciadoHA = parseFloat(dadosPropVlrFinanciado) / parseFloat(dadosPropAgricola.areaBeneficiada)
@@ -185,7 +185,7 @@ describe('Cadastrar Proposta Agrícola', () => {
     })
 
     // CENARIO 04 PJ
-    it('Cadastrar Proposta Agrícola - Produtor PJ Coop Unica - Seguro OMS', () => {
+    it.skip('Cadastrar Proposta Agrícola - Produtor PJ Coop Unica - Seguro OMS', () => {
         cy.acessarAgroMais()
 
         const vlrFinanciadoHA = parseFloat(dadosPropVlrFinanciado) / parseFloat(dadosPropAgricola.areaBeneficiada)
