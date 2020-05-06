@@ -1,8 +1,6 @@
 import { routeGetJobs, } from "../../base-tests/routes";
-describe('Services Get', () => {
 
-    const faker = require('faker');
-    faker.locale = "pt_BR";
+describe('Services Get', () => {
 
     beforeEach(() => {
         cy.consoleErrosOff();
