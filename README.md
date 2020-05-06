@@ -12,7 +12,10 @@ You can check the executions and artifacts on [Cypress Dashboard Executions](htt
 * [Open API's](https://any-api.com/)
 
 ## Dependencies :wrench:
-* [Faker JS](https://github.com/marak/Faker.js/)
+* [Node v12.16.3](https://nodejs.org/en/docs/)
+* [Npm v6.14.4](https://docs.npmjs.com/)
+* [Cypress v4.5.0](https://docs.cypress.io/guides/getting-started/installing-cypress.html)
+* [Faker JS v4.1.0](https://github.com/marak/Faker.js/)
 
 # Step by Step :pencil:
 
