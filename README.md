@@ -2,7 +2,7 @@
 
 Repository build for automated tests using cypress for  interfaces and services.
 
-You can check the executions and artifacts on [Cypress Dashboard Executions](https://dashboard.cypress.io/projects/fnss6o/runs).
+You can check the executions and artifacts on [Cypress Dashboard Executions](https://dashboard.cypress.io/projects/fnss6o/runs)
 
 ![CI](https://github.com/arthurboeck/poc-cypress-e2e/workflows/CI/badge.svg?branch=master) 
 [![Cypress Dashboard][dashboard badge]][dashboard url]
@@ -18,36 +18,43 @@ You can check the executions and artifacts on [Cypress Dashboard Executions](htt
 * [Faker JS v4.1.0](https://github.com/marak/Faker.js/)
 
 # Step by Step :pencil:
-
 ## Clonning the project :art:
-
 ```
 git clone https://github.com/arthurboeck/poc-cypress-e2e.git
 ```
 
 ## Installing Dependencies :pushpin:
-
 ```
 npm install
 ```
 
 ## Opening Cypress Interface :dizzy:
-
 ```
 npm start
 ```
 
 ## Running Cypress Tests :rocket:
-
 ```
 npm test
 ```
 
-## Running Cypress Tests on Command Line :rocket:
+# Project Structure :package:
+## Folder structure :building_construction:
+These folders hold end-to-end tests and supporting files for the Cypress Test Runner.
+* Fixtures holds optional JSON data for mocking, [read more](https://docs.cypress.io/api/commands/fixture.html)
+* Integration holds the actual test files, [read more](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Folder-Structure)
+* Plugins allow you to customize how tests are loaded, [read more](https://docs.cypress.io/plugins/index.html)
+* Support file runs before all tests and is a great place to write or load additional custom commands, [read more](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Support-file)
 
-```
-npx cypress run --record --key 57e297dc-ea87-4943-9f5b-8be1d05972c6 --parallel --browser chrome
-```
+## Structural Files :card_file_box:
+These files hold settings for the Cypress Test Runner.
+* ../cypress.json you can configure project options, [read more](https://docs.cypress.io/guides/references/configuration.html#Options)
+* ../package.json holds metadata relevant to the project and it is used for managing the project's dependencies, scripts, version and a whole lot more, [read more](https://dev.to/easybuoy/understanding-the-package-json-file-3fdg)
+
+## More Information :sparkles:
+* https://github.com/cypress-io
+* https://docs.cypress.io/
+* [Writing your first Cypress Test](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html)
 
 # Thank you! :beers:
 ## Feel free to colaborate, or even contact me! :tada:
