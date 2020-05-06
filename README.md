@@ -7,7 +7,7 @@ You can check the executions and artifacts on [Cypress Dashboard Executions](htt
 ![CI](https://github.com/arthurboeck/poc-cypress-e2e/workflows/CI/badge.svg?branch=master)
 
 ## Test Sources :globe_with_meridians:
-* [Boostrap WebElements](https://www.grocerycrud.com/demo/bootstrap_theme_v4/)
+* [Bootstrap WebElements](https://www.grocerycrud.com/demo/bootstrap_theme_v4/)
 * [Open API's](https://any-api.com/)
 
 ## Dependencies :wrench:
