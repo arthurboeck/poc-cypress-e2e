@@ -17,10 +17,10 @@ jobs:
     strategy:
       matrix:
         # Run on the following browsers
-        browser: [chrome, firefox, edge]
+        browser: [chrome, firefox]
     # Cypress Docker image with Chrome v78
     # and Firefox v70 pre-installed
-    container: cypress/browsers:node12.13.0-chrome78-ff70
+    container: cypress/base:12.16.1
     steps:
       - name: Checkout
         uses: actions/checkout@v1
