@@ -25,6 +25,7 @@ jobs:
 
   Test:
     name: Cypress Run
+    needs: Build
     runs-on: ubuntu-16.04
     # Cypress Docker image with Chrome v78
     # and Firefox v70 pre-installed
