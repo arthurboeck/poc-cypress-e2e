@@ -16,10 +16,9 @@ jobs:
     runs-on: ubuntu-16.04
     strategy:
       matrix:
-        # Run on the following browsers
-        browser: [chrome, firefox]
-    # Cypress Docker image with Chrome v78
-    # and Firefox v70 pre-installed
+        # Run on the following browsers according to docker image
+        browser: [chrome]
+    # Cypress Docker image - https://github.com/cypress-io/cypress-docker-images
     container: cypress/browsers:node12.16.1-chrome80-ff73
     steps:
       - name: Checkout
