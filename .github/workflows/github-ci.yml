@@ -14,13 +14,13 @@ jobs:
   CI:
     name: Cypress Run
     runs-on: ubuntu-16.04
-    # strategy:
-    #   matrix:
+    strategy:
+      matrix:
         # Run on the following browsers
-        # browser: [chrome, firefox]
+        browser: [chrome, firefox]
     # Cypress Docker image with Chrome v78
     # and Firefox v70 pre-installed
-    container: cypress/base:12.16.1
+    container: cypress/browsers:node12.16.1-chrome80-ff73
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -30,7 +30,7 @@ jobs:
       - name: Install Npm
         run: npm install
       - name: Cypress Run
-        run: npx cypress run --record --key 57e297dc-ea87-4943-9f5b-8be1d05972c6 --parallel --browser Chrome #${{ matrix.browser }}
+        run: npx cypress run --record --key 57e297dc-ea87-4943-9f5b-8be1d05972c6 --parallel --browser #${{ matrix.browser }}
 
       # Upload videos and screenshots as artifacts
       - name: Upload Image Artifacts
