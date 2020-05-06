@@ -42,14 +42,14 @@ npm test
 ## Folder structure :building_construction:
 These folders hold end-to-end tests and supporting files for the Cypress Test Runner.
 * Fixtures holds optional JSON data for mocking, [read more](https://docs.cypress.io/api/commands/fixture.html)
-* Integration holds the actual test files, [read more](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Folder-Structure)
+* Integration hold the actual test files, [read more](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Folder-Structure)
 * Plugins allow you to customize how tests are loaded, [read more](https://docs.cypress.io/plugins/index.html)
 * Support file runs before all tests and is a great place to write or load additional custom commands, [read more](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Support-file)
 
 ## Structural Files :card_file_box:
 These files hold settings for the Cypress Test Runner.
-* ../cypress.json you can configure project options, [read more](https://docs.cypress.io/guides/references/configuration.html#Options)
-* ../package.json holds metadata relevant to the project and it is used for managing the project's dependencies, scripts, version and a whole lot more, [read more](https://dev.to/easybuoy/understanding-the-package-json-file-3fdg)
+* [../cypress.json](https://github.com/arthurboeck/poc-cypress-e2e/blob/master/cypress.json) you can configure project options, [read more](https://docs.cypress.io/guides/references/configuration.html#Options)
+* [../package.json](https://github.com/arthurboeck/poc-cypress-e2e/blob/master/package.json) hold settings for managing the project's dependencies, scripts, version and a whole lot more, [read more](https://dev.to/easybuoy/understanding-the-package-json-file-3fdg)
 
 ## More Information :sparkles:
 * https://github.com/cypress-io
@@ -57,7 +57,7 @@ These files hold settings for the Cypress Test Runner.
 * [Writing your first Cypress Test](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html)
 
 # Thank you! :beers:
-## Feel free to colaborate, or even contact me! :tada:
+## Feel free to colaborate, contact me, or anything else! :tada:
 
 [dashboard badge]: https://img.shields.io/badge/cypress-dashboard-brightgreen.svg
 [dashboard url]: https://dashboard.cypress.io/projects/fnss6o/runs
