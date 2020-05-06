@@ -20,4 +20,4 @@ import './access'
 // Alternatively you can use CommonJS syntax:
 require('./commands')
 // require('cypress-xpath')
-// require('faker')
+require('faker')
