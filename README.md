@@ -1,8 +1,8 @@
 # POC - Cypress Interface and Service Tests
 
-## Repository build for automated tests using cypress for  interfaces and services.
+Repository build for automated tests using cypress for  interfaces and services.
 
-## You can check the executions and artifacts on [Cypress Dashboard Executions](https://dashboard.cypress.io/projects/fnss6o/runs).
+You can check the executions and artifacts on [Cypress Dashboard Executions](https://dashboard.cypress.io/projects/fnss6o/runs).
 
 ![CI](https://github.com/arthurboeck/poc-cypress-e2e/workflows/CI/badge.svg?branch=master)
 
@@ -13,9 +13,9 @@
 ## Dependencies :wrench:
 * [Faker JS](https://github.com/marak/Faker.js/)
 
-# Step by Step :ok_hand:
+# Step by Step :pencil:
 
-## Clonning the project :twisted_rightwards_arrows:
+## Clonning the project :art:
 
 ```
 git clone https://github.com/arthurboeck/poc-cypress-e2e.git
