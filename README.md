@@ -39,5 +39,11 @@ npm start
 npm test
 ```
 
+## Running Cypress Tests on Command Line :rocket:
+
+```
+npx cypress run --record --key 57e297dc-ea87-4943-9f5b-8be1d05972c6 --parallel --browser chrome
+```
+
 # Thank you! :beers:
 ## Feel free to colaborate, or even contact me! :tada:
