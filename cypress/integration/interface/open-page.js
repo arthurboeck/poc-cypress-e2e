@@ -1,8 +1,8 @@
 import { routePostCustomer, } from "../../base-tests/routes";
-import faker from 'faker';
 
 describe('Open Application', () => {
 
+    var faker = require ('faker')
     faker.locale = "pt_BR";
 
     beforeEach(() => {
