@@ -30,7 +30,7 @@ jobs:
       - name: Install Npm
         run: npm install
       - name: Cypress Run
-        run: npx cypress run --record --key 57e297dc-ea87-4943-9f5b-8be1d05972c6 --parallel --browser chrome #${{ matrix.browser }}
+        run: npx cypress run --record --key 57e297dc-ea87-4943-9f5b-8be1d05972c6 --parallel --browser Chrome #${{ matrix.browser }}
 
       # Upload videos and screenshots as artifacts
       - name: Upload Image Artifacts
