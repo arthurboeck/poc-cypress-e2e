@@ -2,7 +2,7 @@ import { routePostCustomer, } from "../../base-tests/routes";
 
 describe('Open Application', () => {
 
-    var faker = require ('faker')
+    const faker = require ('faker')
     faker.locale = "pt_BR";
 
     beforeEach(() => {
