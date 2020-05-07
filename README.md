@@ -18,7 +18,7 @@ You can check the executions and artifacts on [Cypress Dashboard Executions](htt
 * [Faker JS v4.1.0](https://github.com/marak/Faker.js/)
 
 # Step by Step :pencil:
-## Clonning the project :art:
+## Clonning the Project :art:
 ```
 git clone https://github.com/arthurboeck/poc-cypress-e2e.git
 ```
@@ -39,7 +39,7 @@ npm test
 ```
 
 # Project Structure :package:
-## Folder structure :building_construction:
+## Folder Structure :building_construction:
 These folders hold end-to-end tests and supporting files for the Cypress Test Runner.
 * Fixtures holds optional JSON data for mocking, [read more](https://docs.cypress.io/api/commands/fixture.html)
 * Integration hold the actual test files, [read more](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Folder-Structure)
