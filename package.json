@@ -6,10 +6,7 @@
   "scripts": {
     "start": "npx cypress open",
     "test": "npx cypress run --browser chrome",
-    "stop": "npm stop",
-    "cypress:run:dev": "CYPRESS_BASE=http://localhost:4200/ npx cypress run --browser chrome",
-    "cypress:run:test": "CYPRESS_BASE=https://www.grocerycrud.com/demo/bootstrap_theme_v4/ npx cypress run --browser chrome",
-    "cypress:run:hom": "CYPRESS_BASE=https://www.grocerycrud.com/demo/bootstrap_theme_v4/  npx cypress run --browser chrome"
+    "stop": "npm stop"
   },
   "repository": {
     "type": "git",
