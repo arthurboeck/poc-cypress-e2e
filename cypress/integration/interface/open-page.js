@@ -32,7 +32,7 @@ describe('Open Application', () => {
             expect(xhr.status).to.eq(200)
         })
 
-        cy.get('[id="report-success"]').should('be.visible').screenshot()
+        cy.get('[id="report-success"]').should('be.visible')
         cy.screenshot()
     })
 
