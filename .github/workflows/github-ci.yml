@@ -36,7 +36,7 @@ jobs:
       # Upload videos and screenshots as artifacts
       - name: Upload Image Artifacts
         uses: actions/upload-artifact@v1
-        if: failure()
+        if: always()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
