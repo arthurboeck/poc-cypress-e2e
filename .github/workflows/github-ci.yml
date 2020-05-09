@@ -28,7 +28,7 @@ jobs:
         browser: [chrome]
 
         # Runs 3 copies of the current job in parallel
-        containers: [1, 2, 3, 4, 5, 6, 7]
+        containers: [1, 2, 3, 4, 5, 6]
     
     steps:
       - name: Checkout
