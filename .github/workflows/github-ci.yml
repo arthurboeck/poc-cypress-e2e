@@ -26,9 +26,10 @@ jobs:
       matrix:
         # Run on the following browsers according to docker image
         browser: [chrome]
+        
         # Runs 2 copies of the current job in parallel
-        # Cypress Docker image - https://github.com/cypress-io/cypress-docker-images
-        containers: [1, 2, 3]
+        containers: [1, 2]
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -38,7 +39,7 @@ jobs:
       - name: Install Npm
         run: npm install
       - name: Cypress Run
-        run: npx cypress run --record --key 57e297dc-ea87-4943-9f5b-8be1d05972c6 --group Run --browser ${{ matrix.browser }} --parallel
+        run: npx cypress run --record --key 57e297dc-ea87-4943-9f5b-8be1d05972c6 --group CI --browser ${{ matrix.browser }} --parallel
 
       # Upload videos and screenshots as artifacts
       - name: Upload Image Artifacts
