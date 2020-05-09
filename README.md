@@ -38,6 +38,20 @@ npm start
 npm test
 ```
 
+## Debugging :bug:
+Cypress runs on debug mode by default, once you add a debug info, it allows to debug your test on your browser's console and dev tools, [read more](https://docs.cypress.io/guides/guides/debugging.html)
+
+Usage sample [../debug-case.js](https://github.com/arthurboeck/poc-cypress-e2e/blob/master/cypress/integration/interface/debug-case.js)
+```
+cy.get('@postCustomer').then((xhr) => {
+            // The bellow command allows to debug on browser dev tools.
+            // To check the vars from xhr, you just need to type it on browser console.
+            debugger 
+            expect(xhr.method).to.eq('POST')
+            expect(xhr.status).to.eq(200)
+        })
+```
+
 # Project Structure :package:
 ## Folder Structure :building_construction:
 These folders hold end-to-end tests and supporting files for the Cypress Test Runner.
