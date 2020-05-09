@@ -26,9 +26,9 @@ jobs:
       matrix:
         # Run on the following browsers according to docker image
         browser: [chrome]
-        
-        # Runs 2 copies of the current job in parallel
-        containers: [1, 2]
+
+        # Runs 3 copies of the current job in parallel
+        containers: [1, 2, 3]
     
     steps:
       - name: Checkout
