@@ -1,4 +1,4 @@
-import { routeFakeUsersApi, } from "../../base-tests/routes";
+import { routeFakeUsersApi, } from "../../support/routes";
 
 describe('Post Services', () => {
 

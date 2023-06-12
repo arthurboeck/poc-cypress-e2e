@@ -1,4 +1,4 @@
-import { routePostCustomer, } from "../../base-tests/routes";
+import { routePostCustomer, } from "../../support/routes";
 
 describe('Open Application', () => {
 

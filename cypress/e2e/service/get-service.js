@@ -1,4 +1,4 @@
-import { routeGetJobs, routeFakeUsersApi } from "../../base-tests/routes";
+import { routeGetJobs, routeFakeUsersApi } from "../../support/routes";
 
 describe('Get Services', () => {
 
