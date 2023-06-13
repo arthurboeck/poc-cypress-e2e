@@ -24,7 +24,7 @@ describe('Open Application', () => {
         
         cy.get('[id="form-button-save"]').click()
 
-        cy.server()
+        cy.intercept()
         cy.route('POST', routePostCustomer).as('postCustomer')
         cy.wait('@postCustomer')
         cy.get('@postCustomer').then((xhr) => {

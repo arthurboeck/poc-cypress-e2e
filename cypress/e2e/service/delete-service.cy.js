@@ -10,7 +10,7 @@ describe('Delete Services', () => {
 
         var id = 1
 
-        cy.server()
+        cy.intercept()
         cy.request({
             method: 'DELETE',
             url: routeFakeUsersApi + "/" + id

@@ -8,14 +8,14 @@ describe('Get Services', () => {
 
     it('Get Jobs List Then Get Job by ID', () => {
 
-        cy.server()
+        cy.intercept()
         cy.request('GET', routeGetJobs).as('getJobs')
         cy.get('@getJobs').then((response) => {
             expect(response.status).to.eq(200)
 
             let idJob = response.body[2].uuid
 
-            cy.server()
+            cy.intercept()
             cy.request({
                 method: 'GET',
                 url: routeGetJobs + "/" + idJob,
@@ -31,7 +31,7 @@ describe('Get Services', () => {
 
     it('Get User List', () => {
 
-        cy.server()
+        cy.intercept()
         cy.request('GET', routeFakeUsersApi).as('getUsers')
         cy.get('@getUsers').then((response) => {
             expect(response.status).to.eq(200)
@@ -44,7 +44,7 @@ describe('Get Services', () => {
         var username = "User 1"
         var password = "Password1"
 
-        cy.server()
+        cy.intercept()
         cy.request({
             method: 'GET',
             url: routeFakeUsersApi + "/" + id,

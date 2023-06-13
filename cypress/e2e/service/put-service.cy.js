@@ -16,7 +16,7 @@ describe('PUT Services', () => {
         var username = faker.internet.userName()
         var password = faker.internet.password()
 
-        cy.server()
+        cy.intercept()
         cy.request({
             method: 'PUT',
             url: routeFakeUsersApi + "/" + id,
