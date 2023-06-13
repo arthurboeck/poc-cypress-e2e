@@ -1,5 +1,5 @@
 import { routePostCustomer, } from "../../support/routes";
-import { faker } from '@faker-js/faker';
+import { faker } from '@faker-js/faker/locale/en';
 
 describe('Debug Application', () => {
 
