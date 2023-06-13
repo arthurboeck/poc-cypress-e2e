@@ -1,15 +1,14 @@
 import { routeFakeUsersApi } from "../../support/routes";
+import { faker } from '@faker-js/faker';
 
 describe("Post Services", () => {
-  const faker = require("faker");
-  faker.locale = "pt_BR";
 
   beforeEach(() => {
     cy.consoleErrosOff();
   });
 
   it("Post User", () => {
-    var id = faker.random.number();
+    var id = faker.string.numeric();
     var username = faker.internet.userName();
     var password = faker.internet.password();
 

@@ -1,9 +1,7 @@
 import { routePostCustomer, } from "../../support/routes";
+import { faker } from '@faker-js/faker';
 
 describe('Debug Application', () => {
-
-    const faker = require('faker')
-    faker.locale = "pt_BR";
 
     beforeEach(() => {
         cy.consoleErrosOff();
@@ -13,9 +11,9 @@ describe('Debug Application', () => {
 
         cy.accessPage()
         cy.clickFirstLine()
-        cy.get('input[id="field-customerName"]').clear().type(faker.name.findName())
-        cy.get('input[id="field-contactLastName"]').clear().type(faker.name.lastName())
-        cy.get('input[id="field-contactFirstName"]').clear().type(faker.name.findName())
+        cy.get('input[id="field-customerName"]').clear().type(faker.person.firstName())
+        cy.get('input[id="field-contactLastName"]').clear().type(faker.person.lastName())
+        cy.get('input[id="field-contactFirstName"]').clear().type(faker.person.firstName())
         cy.get('input[id="field-phone"]').clear().type(faker.phone.phoneNumber())
         
         cy.get('[id="form-button-save"]').click()

@@ -16,7 +16,7 @@ You can check the executions and artifacts on [Cypress Dashboard Executions](htt
 * [Node](https://nodejs.org/en/docs/)
 * [Npm](https://docs.npmjs.com/)
 * [Cypress v12.14.0](https://docs.cypress.io/guides/getting-started/installing-cypress.html)
-* [Faker JS v4.1.0](https://github.com/marak/Faker.js/)
+* [Faker JS v8.0.2](https://github.com/faker-js/faker)
 
 # Step by Step :pencil:
 ## Clonning the Project :art:
