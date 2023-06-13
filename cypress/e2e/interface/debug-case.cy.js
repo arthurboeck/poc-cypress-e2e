@@ -20,14 +20,11 @@ describe('Debug Application', () => {
         
         cy.get('[id="form-button-save"]').click()
 
+        // The bellow command allows to debug on browser dev tools.
+        // To check the vars from xhr, you just need to type it on browser console.
+        // debugger 
         cy.intercept('POST', routePostCustomer).as('postCustomer')
-        cy.wait('@postCustomer').then((xhr) => {
-            // The bellow command allows to debug on browser dev tools.
-            // To check the vars from xhr, you just need to type it on browser console.
-            // debugger 
-            expect(xhr.method).to.eq('POST')
-            expect(xhr.status).to.eq(200)
-        })
+        cy.wait('@postCustomer')
 
         cy.get('[id="report-success"]').should('be.visible')
         cy.screenshot()

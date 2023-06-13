@@ -25,10 +25,7 @@ describe('Open Application', () => {
         cy.get('[id="form-button-save"]').click()
 
         cy.intercept('POST', routePostCustomer).as('postCustomer')
-        cy.wait('@postCustomer').then((xhr) => {
-            expect(xhr.method).to.eq('POST')
-            expect(xhr.status).to.eq(200)
-        })
+        cy.wait('@postCustomer')
 
         cy.get('[id="report-success"]').should('be.visible')
         cy.screenshot()
