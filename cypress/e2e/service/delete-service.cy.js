@@ -6,7 +6,7 @@ describe('Delete Services', () => {
         cy.consoleErrosOff();
     });
 
-    it('Post User', () => {
+    it('Delete User', () => {
 
         var id = 1
 
