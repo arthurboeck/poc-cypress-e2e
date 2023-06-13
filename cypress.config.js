@@ -16,7 +16,7 @@ module.exports = defineConfig({
     clearSessionStorage: true,
     retries: 3,
     blockHosts: ["*fonts.googleapis.com"],
-    host: "https://www.grocerycrud.com/demo/bootstrap_theme_v4/",
+    host: "https://www.grocerycrud.com/v1.x/demo/bootstrap_theme_v4",
 
     setupNodeEvents(on, config) {
       config.defaultCommandTimeout = 10000;

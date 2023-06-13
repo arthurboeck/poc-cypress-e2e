@@ -8,7 +8,7 @@ You can check the executions and artifacts on [Cypress Dashboard Executions](htt
 [![Cypress Dashboard][dashboard badge]][dashboard url]
 
 ## Test Sources :globe_with_meridians:
-* [Bootstrap WebElements](https://www.grocerycrud.com/demo/bootstrap_theme_v4/)
+* [Bootstrap WebElements](https://www.grocerycrud.com/v1.x/demo/bootstrap_theme_v4)
 * [Fake Rest API](https://fakerestapi.azurewebsites.net/)
 * [Open API's](https://any-api.com/)
 
