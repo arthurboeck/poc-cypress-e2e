@@ -14,7 +14,7 @@ module.exports = defineConfig({
     clearCookies: true,
     clearLocalStorage: true,
     clearSessionStorage: true,
-    retries: 3,
+    retries: 0,
     blockHosts: ["*fonts.googleapis.com"],
     host: "https://www.grocerycrud.com/v1.x/demo/bootstrap_theme_v4",
 
