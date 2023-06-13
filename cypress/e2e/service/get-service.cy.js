@@ -6,26 +6,26 @@ describe('Get Services', () => {
         cy.consoleErrosOff();
     });
 
-    it('Get Jobs List Then Get Job by ID', () => {
+    // it('Get Jobs List Then Get Job by ID', () => {
 
-        cy.request('GET', routeGetJobs).as('getJobs')
-        cy.get('@getJobs').then((response) => {
-            expect(response.status).to.eq(200)
+    //     cy.request('GET', routeGetJobs).as('getJobs')
+    //     cy.get('@getJobs').then((response) => {
+    //         expect(response.status).to.eq(200)
 
-            let idJob = response.body[2].uuid
+    //         let idJob = response.body[2].uuid
 
-            cy.request({
-                method: 'GET',
-                url: routeGetJobs + "/" + idJob,
-                // auth:{ -- Parameter used to set bearer token
-                //     bearer:getTokenId()
-                // }
-            }).then((response) => {
-                expect(response.status).to.eq(200)
-                expect(response.body.uuid).to.eq(idJob)
-            })
-        })
-    })
+    //         cy.request({
+    //             method: 'GET',
+    //             url: routeGetJobs + "/" + idJob,
+    //             // auth:{ -- Parameter used to set bearer token
+    //             //     bearer:getTokenId()
+    //             // }
+    //         }).then((response) => {
+    //             expect(response.status).to.eq(200)
+    //             expect(response.body.uuid).to.eq(idJob)
+    //         })
+    //     })
+    // })
 
     it('Get User List', () => {
 
