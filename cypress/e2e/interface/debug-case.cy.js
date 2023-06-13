@@ -20,10 +20,8 @@ describe('Debug Application', () => {
         
         cy.get('[id="form-button-save"]').click()
 
-        cy.intercept()
-        cy.route('POST', routePostCustomer).as('postCustomer')
-        cy.wait('@postCustomer')
-        cy.get('@postCustomer').then((xhr) => {
+        cy.intercept('POST', routePostCustomer).as('postCustomer')
+        cy.wait('@postCustomer').then((xhr) => {
             // The bellow command allows to debug on browser dev tools.
             // To check the vars from xhr, you just need to type it on browser console.
             // debugger 

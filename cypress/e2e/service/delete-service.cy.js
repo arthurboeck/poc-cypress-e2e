@@ -10,13 +10,12 @@ describe('Delete Services', () => {
 
         var id = 1
 
-        cy.intercept()
         cy.request({
             method: 'DELETE',
             url: routeFakeUsersApi + "/" + id
-        }).then((response => {
+        }).then((response) => {
             expect(response.status).to.eq(200)
-        }))
+        })
 
     })
 });
