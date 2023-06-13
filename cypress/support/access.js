@@ -1,4 +1,4 @@
-import { url } from "../base-tests/routes";
+import { url } from "../support/routes";
 
 // ***********************************************
 // This example commands.js shows you how to

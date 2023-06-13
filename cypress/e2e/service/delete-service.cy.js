@@ -1,4 +1,4 @@
-import { routeFakeUsersApi, } from "../../base-tests/routes";
+import { routeFakeUsersApi, } from "../../support/routes";
 
 describe('Delete Services', () => {
 
@@ -6,17 +6,16 @@ describe('Delete Services', () => {
         cy.consoleErrosOff();
     });
 
-    it('Post User', () => {
+    it('Delete User', () => {
 
         var id = 1
 
-        cy.server()
         cy.request({
             method: 'DELETE',
             url: routeFakeUsersApi + "/" + id
-        }).then((response => {
+        }).then((response) => {
             expect(response.status).to.eq(200)
-        }))
+        })
 
     })
 });

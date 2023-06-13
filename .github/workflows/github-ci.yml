@@ -9,15 +9,15 @@ on:
   pull_request:
     branches:
       - master
-  schedule:
-    - cron: "0 */12 * * *"
+  # schedule:
+  #   - cron: "0 */12 * * *"
 
 jobs:
   CI:
     name: Cypress Run
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     # Cypress Docker image - https://github.com/cypress-io/cypress-docker-images
-    container: cypress/browsers:node12.16.1-chrome80-ff73
+    container: cypress/browsers:latest
     strategy:
       # when one test fails, DO NOT cancel the other
       # containers, because this will kill Cypress processes
@@ -32,26 +32,28 @@ jobs:
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
 
       # because of "record" and "parallel" parameters
       # these containers will load balance all found tests among themselves
-      - name: Install Npm
+      - name: Npm Install
         run: npm install
       - name: Cypress Run
         run: npx cypress run --record --key 57e297dc-ea87-4943-9f5b-8be1d05972c6 --group CI --browser ${{ matrix.browser }} --parallel
 
       # Upload videos and screenshots as artifacts
       - name: Upload Image Artifacts
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
+          if-no-files-found: ignore
 
       - name: Upload Video Artifacts
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: cypress-videos
           path: cypress/videos
+          if-no-files-found: ignore
