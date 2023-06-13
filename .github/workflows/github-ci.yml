@@ -32,7 +32,7 @@ jobs:
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
 
       # because of "record" and "parallel" parameters
       # these containers will load balance all found tests among themselves
@@ -43,15 +43,17 @@ jobs:
 
       # Upload videos and screenshots as artifacts
       - name: Upload Image Artifacts
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
+          if-no-files-found: ignore
 
       - name: Upload Video Artifacts
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: cypress-videos
           path: cypress/videos
+          if-no-files-found: ignore
