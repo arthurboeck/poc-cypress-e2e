@@ -22,7 +22,7 @@ describe('Get Services', () => {
                 // }
             }).then((response) => {
                 expect(response.status).to.eq(200)
-                expect(response.body).property('uuid').to.eq(idJob)
+                expect(response.body.uuid).to.eq(idJob)
             })
         })
     })
@@ -46,9 +46,9 @@ describe('Get Services', () => {
             url: routeFakeUsersApi + "/" + id,
         }).then((response) => {
             expect(response.status).to.eq(200)
-            expect(response.body).property('ID').to.eq(id)
-            expect(response.body).property('UserName').to.eq(username)
-            expect(response.body).property('Password').to.eq(password)
+            expect(response.body.id).to.eq(id)
+            expect(response.body.userName).to.eq(username)
+            expect(response.body.password).to.eq(password)
         })
     })
 });
