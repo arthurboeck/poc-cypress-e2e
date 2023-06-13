@@ -36,7 +36,7 @@ jobs:
 
       # because of "record" and "parallel" parameters
       # these containers will load balance all found tests among themselves
-      - name: Install Npm
+      - name: Npm Install
         run: npm install
       - name: Cypress Run
         run: npx cypress run --record --key 57e297dc-ea87-4943-9f5b-8be1d05972c6 --group CI --browser ${{ matrix.browser }} --parallel
