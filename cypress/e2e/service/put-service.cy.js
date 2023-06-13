@@ -10,7 +10,7 @@ describe('PUT Services', () => {
     it('Post User', () => {
 
         var id = 1
-        var newId = faker.string.numeric()
+        var newId = faker.number.int(100)
         var username = faker.internet.userName()
         var password = faker.internet.password()
 
@@ -24,7 +24,7 @@ describe('PUT Services', () => {
             }
         }).then((response) => {
             expect(response.status).to.eq(200)
-            expect(response.body.id).to.eq([newId])
+            expect(response.body.id).to.eq(newId)
             expect(response.body.userName).to.eq(username)
             expect(response.body.password).to.eq(password)
         })
