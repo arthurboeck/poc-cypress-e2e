@@ -24,7 +24,7 @@ describe('PUT Services', () => {
             }
         }).then((response) => {
             expect(response.status).to.eq(200)
-            expect(response.body.id).to.eq(newId)
+            expect(response.body.id).to.eq([newId])
             expect(response.body.userName).to.eq(username)
             expect(response.body.password).to.eq(password)
         })
