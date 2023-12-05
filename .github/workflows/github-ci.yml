@@ -1,6 +1,3 @@
-# GitHub Actions
-# https://help.github.com/en/articles/configuring-a-workflow
-# good list of examples at http://www.thedreaming.org/2019/09/10/github-ci/
 name: CI
 on:
   push:
@@ -13,7 +10,28 @@ on:
   #   - cron: "0 */12 * * *"
 
 jobs:
-  CI:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Npm Install
+        run: npm install
+
+      - name: ESLint
+        run: npm run eslint
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: eslint-report
+          path: lint-report.html
+          if-no-files-found: ignore
+
+  test:
     name: Cypress Run
     runs-on: ubuntu-latest
     # Cypress Docker image - https://github.com/cypress-io/cypress-docker-images
