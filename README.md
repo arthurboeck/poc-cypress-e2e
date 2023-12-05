@@ -15,8 +15,9 @@ You can check the executions and artifacts on [Cypress Dashboard Executions](htt
 ## Dependencies :wrench:
 * [Node](https://nodejs.org/en/docs/)
 * [Npm](https://docs.npmjs.com/)
-* [Cypress v12.14.0](https://docs.cypress.io/guides/getting-started/installing-cypress.html)
-* [Faker JS v8.0.2](https://github.com/faker-js/faker)
+* [Cypress v13.6.0](https://docs.cypress.io/guides/getting-started/installing-cypress.html)
+* [Cypress ESLint v2.15.1](https://github.com/cypress-io/eslint-plugin-cypress)
+* [Faker JS v8.3.1](https://github.com/faker-js/faker)
 
 # Step by Step :pencil:
 ## Clonning the Project :art:

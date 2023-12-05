@@ -1,6 +1,3 @@
-# GitHub Actions
-# https://help.github.com/en/articles/configuring-a-workflow
-# good list of examples at http://www.thedreaming.org/2019/09/10/github-ci/
 name: CI
 on:
   push:
@@ -13,8 +10,30 @@ on:
   #   - cron: "0 */12 * * *"
 
 jobs:
-  CI:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Npm Install
+        run: npm install
+
+      - name: ESLint
+        run: npm run eslint
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: eslint-report
+          path: lint-report.html
+          if-no-files-found: ignore
+
+  test:
     name: Cypress Run
+    needs: build
     runs-on: ubuntu-latest
     # Cypress Docker image - https://github.com/cypress-io/cypress-docker-images
     container: cypress/browsers:latest
@@ -32,14 +51,23 @@ jobs:
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # because of "record" and "parallel" parameters
       # these containers will load balance all found tests among themselves
       - name: Npm Install
         run: npm install
       - name: Cypress Run
-        run: npx cypress run --record --key 57e297dc-ea87-4943-9f5b-8be1d05972c6 --group CI --browser ${{ matrix.browser }} --parallel
+        uses: cypress-io/github-action@v6
+        with:
+          record: true
+          parallel: true
+          group: 'CI'
+          tag: 'CI'
+          browser: ${{ matrix.browser }}
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Upload videos and screenshots as artifacts
       - name: Upload Image Artifacts
