@@ -33,6 +33,7 @@ jobs:
 
   test:
     name: Cypress Run
+    needs: build
     runs-on: ubuntu-latest
     # Cypress Docker image - https://github.com/cypress-io/cypress-docker-images
     container: cypress/browsers:latest
@@ -57,7 +58,7 @@ jobs:
       - name: Npm Install
         run: npm install
       - name: Cypress Run
-        run: npx cypress run --record --key 57e297dc-ea87-4943-9f5b-8be1d05972c6 --group CI --browser ${{ matrix.browser }} --parallel
+        run: npx cypress run --record --key ${CYPRESS_KEY} --group CI --browser ${{ matrix.browser }} --parallel
 
       # Upload videos and screenshots as artifacts
       - name: Upload Image Artifacts
