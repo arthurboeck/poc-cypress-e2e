@@ -58,7 +58,7 @@ jobs:
       - name: Npm Install
         run: npm install
       - name: Cypress Run
-        run: npx cypress run --record --key ${CYPRESS_KEY} --group CI --browser ${{ matrix.browser }} --parallel
+        run: npx cypress run --record --key ${{ secrets.CYPRESS_KEY }} --group CI --browser ${{ matrix.browser }} --parallel
 
       # Upload videos and screenshots as artifacts
       - name: Upload Image Artifacts
