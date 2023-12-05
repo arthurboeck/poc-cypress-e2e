@@ -58,7 +58,16 @@ jobs:
       - name: Npm Install
         run: npm install
       - name: Cypress Run
-        run: npx cypress run --record --key ${{ secrets.CYPRESS_KEY }} --browser ${{ matrix.browser }} --parallel
+        uses: cypress-io/github-action@v6
+        with:
+          record: true
+          parallel: true
+          group: 'CI'
+          tag: 'CI'
+          browser: ${{ matrix.browser }}
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Upload videos and screenshots as artifacts
       - name: Upload Image Artifacts
