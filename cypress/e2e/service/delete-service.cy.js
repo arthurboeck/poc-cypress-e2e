@@ -1,6 +1,6 @@
 import { routeFakeUsersApi, } from "../../support/routes";
 
-describe('Delete Services', () => {
+describe('Delete Services', { tags: ['@api', '@smoke'] }, () => {
 
     beforeEach(() => {
         cy.consoleErrosOff();

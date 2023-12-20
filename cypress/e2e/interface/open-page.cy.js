@@ -1,7 +1,7 @@
 import { routePostCustomer, } from "../../support/routes";
 import { faker } from '@faker-js/faker/locale/en';
 
-describe('Open Application', () => {
+describe('Open Application', { tags: ['@web'] }, () => {
 
     beforeEach(() => {
         cy.consoleErrosOff();
@@ -19,7 +19,7 @@ describe('Open Application', () => {
         cy.get('input[id="field-contactLastName"]').clear().type(faker.person.lastName())
         cy.get('input[id="field-contactFirstName"]').clear().type(faker.person.firstName())
         cy.get('input[id="field-phone"]').clear().type(faker.phone.number())
-        
+
         cy.get('[id="form-button-save"]').click()
 
         cy.intercept('POST', routePostCustomer).as('postCustomer')
