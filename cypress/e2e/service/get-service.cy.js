@@ -1,6 +1,6 @@
 import { routeGetJobs, routeFakeUsersApi } from "../../support/routes";
 
-describe('Get Services', () => {
+describe('Get Services', { tags: ['@api'] }, () => {
 
     beforeEach(() => {
         cy.consoleErrosOff();

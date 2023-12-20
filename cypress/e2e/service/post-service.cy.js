@@ -1,7 +1,7 @@
 import { routeFakeUsersApi } from "../../support/routes";
 import { faker } from '@faker-js/faker/locale/en';
 
-describe("Post Services", () => {
+describe("Post Services", { tags: ['@api'] }, () => {
 
   beforeEach(() => {
     cy.consoleErrosOff();
