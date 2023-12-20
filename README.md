@@ -16,28 +16,37 @@ You can check the executions and artifacts on [Cypress Dashboard Executions](htt
 * [Node](https://nodejs.org/en/docs/)
 * [Npm](https://docs.npmjs.com/)
 * [Cypress v13.6.0](https://docs.cypress.io/guides/getting-started/installing-cypress.html)
+* [Cypress Grep v4.0.1](https://github.com/cypress-io/cypress/tree/develop/npm/grep)
 * [Cypress ESLint v2.15.1](https://github.com/cypress-io/eslint-plugin-cypress)
 * [Faker JS v8.3.1](https://github.com/faker-js/faker)
 
 # Step by Step :pencil:
 ## Clonning the Project :art:
-```
+```shell
 git clone https://github.com/arthurboeck/poc-cypress-e2e.git
 ```
 
 ## Installing Dependencies :pushpin:
-```
+```shell
 npm install
 ```
 
 ## Opening Cypress Interface :dizzy:
-```
+```shell
 npm start
 ```
 
 ## Running Cypress Tests :rocket:
-```
+```shell
 npm test
+```
+
+## Running Cypress Tests By Tags :rocket:
+
+The following command will run all tests with the tag @api, you can read more [here](https://github.com/cypress-io/cypress/tree/develop/npm/grep#filter-with-tags).
+
+```shell
+npm run test -- --env grepTags=@api
 ```
 
 ## Debugging :bug:
