@@ -17,9 +17,14 @@ module.exports = defineConfig({
     retries: 0,
     blockHosts: ["*fonts.googleapis.com"],
     host: "https://www.grocerycrud.com/v1.x/demo/bootstrap_theme_v4",
+    env:{
+        grepFilterSpecs: true,
+    },
 
     setupNodeEvents(on, config) {
       config.defaultCommandTimeout = 10000;
+
+      require('@cypress/grep/src/plugin')(config);
 
       return config;
     },
