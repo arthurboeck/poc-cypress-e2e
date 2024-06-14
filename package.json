@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "eslint": "npx eslint --format html --output-file ./eslint-report.html",
+    "build:lint": "npx eslint --format html --output-file ./eslint-report.html",
+    "build:prettier:check": "npx prettier . --check",
+    "build:prettier:format": "npx prettier . --write",
     "start": "npx cypress open",
     "test": "npx cypress run --browser chrome",
     "stop": "npm stop",
@@ -28,5 +30,8 @@
     "eslint-plugin-cypress": "^3.3.0",
     "eslint-plugin-mocha": "^10.4.3",
     "globals": "^15.4.0"
+  },
+  "dependencies": {
+    "prettier": "^3.3.2"
   }
 }
