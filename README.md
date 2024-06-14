@@ -17,6 +17,7 @@ You can check the executions and artifacts on [Cypress Dashboard Executions](htt
 
 - [Node](https://nodejs.org/en/docs/)
 - [Npm](https://docs.npmjs.com/)
+- [Brazilian Utils v1.0.0-rc.12](https://brazilian-utils.com.br/#/getting-started)
 - [Cypress v13.11.0](https://docs.cypress.io/guides/getting-started/installing-cypress.html)
 - [Cypress Grep v4.0.2](https://github.com/cypress-io/cypress/tree/develop/npm/grep)
 - [Cypress ESLint v3.3.0](https://github.com/cypress-io/eslint-plugin-cypress)
