@@ -19,6 +19,7 @@ module.exports = defineConfig({
     host: "https://www.grocerycrud.com/v1.x/demo/bootstrap_theme_v4",
     env:{
         grepFilterSpecs: true,
+        grepOmitFiltered: true,
     },
 
     setupNodeEvents(on, config) {
