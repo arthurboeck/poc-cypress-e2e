@@ -16,8 +16,8 @@ describe('Debug Application', { tags: ['@web', '@debug'] }, function () {
 
     cy.get('[id="form-button-save"]').click();
 
-    // The bellow command allows to debug on browser dev tools.
-    // To check the vars from xhr, you just need to type it on browser console.
+    // Bellow command enables debugging in browser dev tools.
+    // To inspect the vars from xhr, type it in the browser console.
     // Debugger
     cy.intercept('POST', routePostCustomer).as('postCustomer');
     cy.wait('@postCustomer');
