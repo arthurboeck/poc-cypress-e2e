@@ -3,7 +3,7 @@ import { routePostCustomer } from '../../support/routes';
 
 describe('Debug Application', { tags: ['@web', '@debug'] }, function () {
   before(function () {
-    cy.consoleErrosOff();
+    cy.consoleErrorsOff();
   });
 
   it('Debug Application - Costumer Edit', function () {

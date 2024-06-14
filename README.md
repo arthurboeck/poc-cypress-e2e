@@ -60,11 +60,11 @@ npm run test -- --env grepTags=@api
 
 ## Debugging :bug:
 
-Cypress runs in debug mode by default. Once you add a debug information, it enables debugging of your test in your browser's console and dev tools, [read more](https://docs.cypress.io/guides/guides/debugging.html)
+Cypress runs in debug mode by default. Once you add debug information, it enables debugging of your test in your browser's console and dev tools, [read more](https://docs.cypress.io/guides/guides/debugging.html)
 
 Usage sample [../debug-case.js](https://github.com/arthurboeck/poc-cypress-e2e/blob/master/cypress/e2e/interface/debug-case.cy.js)
 
-```
+```JavaScript
 cy.get('@postCustomer').then((xhr) => {
             // The bellow command allows to debug on browser dev tools.
             // To check the vars from xhr, you just need to type it on browser console.

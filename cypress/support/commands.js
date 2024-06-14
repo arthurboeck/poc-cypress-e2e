@@ -24,7 +24,7 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('consoleErrosOff', () => {
+Cypress.Commands.add('consoleErrorsOff', () => {
   Cypress.on(
     'uncaught:exception',
     () =>

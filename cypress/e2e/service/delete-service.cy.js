@@ -2,7 +2,7 @@ import { routeFakeUsersApi } from '../../support/routes';
 
 describe('Delete Services', { tags: ['@api', '@smoke'] }, function () {
   before(function () {
-    cy.consoleErrosOff();
+    cy.consoleErrorsOff();
   });
 
   it('Delete User', function () {

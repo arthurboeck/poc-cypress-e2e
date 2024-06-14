@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker/locale/en';
 
 describe('Post Services', { tags: ['@api'] }, function () {
   before(function () {
-    cy.consoleErrosOff();
+    cy.consoleErrorsOff();
   });
 
   it('Post User', function () {

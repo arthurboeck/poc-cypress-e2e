@@ -3,7 +3,7 @@ import { routePostCustomer } from '../../support/routes';
 
 describe('Open Application', { tags: ['@web'] }, function () {
   beforeEach(function () {
-    cy.consoleErrosOff();
+    cy.consoleErrorsOff();
   });
 
   it('Open Application - Costumer List', function () {

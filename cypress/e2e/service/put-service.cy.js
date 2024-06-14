@@ -3,7 +3,7 @@ import { routeFakeUsersApi } from '../../support/routes';
 
 describe('PUT Services', { tags: ['@api'] }, function () {
   before(function () {
-    cy.consoleErrosOff();
+    cy.consoleErrorsOff();
   });
 
   it('Post User', function () {

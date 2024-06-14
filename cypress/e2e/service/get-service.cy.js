@@ -2,7 +2,7 @@ import { routeFakeUsersApi } from '../../support/routes';
 
 describe('Get Services', { tags: ['@api'] }, function () {
   beforeEach(function () {
-    cy.consoleErrosOff();
+    cy.consoleErrorsOff();
   });
 
   it('Get User List', function () {
