@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "POC - Cypres Interface and Service Tests",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "eslint": "npx eslint --format html --output-file ./lint-report.html",
+    "eslint": "npx eslint --format html --output-file ./eslint-report.html",
     "start": "npx cypress open",
     "test": "npx cypress run --browser chrome",
     "stop": "npm stop",
@@ -19,9 +20,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@faker-js/faker": "^8.3.1",
-    "cypress": "^13.6.0",
-    "eslint-plugin-cypress": "^2.15.1",
-    "@cypress/grep": "^4.0.1"
+    "@cypress/grep": "^4.0.2",
+    "@eslint/js": "^9.5.0",
+    "@faker-js/faker": "^8.4.1",
+    "cypress": "^13.11.0",
+    "eslint": "^9.5.0",
+    "eslint-plugin-cypress": "^3.3.0",
+    "eslint-plugin-mocha": "^10.4.3",
+    "globals": "^15.4.0"
   }
 }
