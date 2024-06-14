@@ -15,10 +15,11 @@ You can check the executions and artifacts on [Cypress Dashboard Executions](htt
 ## Dependencies :wrench:
 * [Node](https://nodejs.org/en/docs/)
 * [Npm](https://docs.npmjs.com/)
-* [Cypress v13.6.0](https://docs.cypress.io/guides/getting-started/installing-cypress.html)
-* [Cypress Grep v4.0.1](https://github.com/cypress-io/cypress/tree/develop/npm/grep)
-* [Cypress ESLint v2.15.1](https://github.com/cypress-io/eslint-plugin-cypress)
-* [Faker JS v8.3.1](https://github.com/faker-js/faker)
+* [Cypress v13.11.0](https://docs.cypress.io/guides/getting-started/installing-cypress.html)
+* [Cypress Grep v4.0.2](https://github.com/cypress-io/cypress/tree/develop/npm/grep)
+* [Cypress ESLint v3.3.0](https://github.com/cypress-io/eslint-plugin-cypress)
+* [ESLint v9.5.0](https://eslint.org/docs/latest/use/getting-started)
+* [Faker JS v8.4.1](https://github.com/faker-js/faker)
 
 # Step by Step :pencil:
 ## Clonning the Project :art:
@@ -50,7 +51,7 @@ npm run test -- --env grepTags=@api
 ```
 
 ## Debugging :bug:
-Cypress runs on debug mode by default, once you add a debug info, it allows to debug your test on your browser's console and dev tools, [read more](https://docs.cypress.io/guides/guides/debugging.html)
+Cypress runs in debug mode by default. Once you add a debug information, it enables debugging of your test in your browser's console and dev tools, [read more](https://docs.cypress.io/guides/guides/debugging.html)
 
 Usage sample [../debug-case.js](https://github.com/arthurboeck/poc-cypress-e2e/blob/master/cypress/e2e/interface/debug-case.cy.js)
 ```
@@ -67,14 +68,14 @@ cy.get('@postCustomer').then((xhr) => {
 ## Folder Structure :building_construction:
 These folders hold end-to-end tests and supporting files for the Cypress Test Runner.
 * `Fixtures` holds optional JSON data for mocking, [read more](https://docs.cypress.io/api/commands/fixture.html)
-* `e2e` hold the actual test files, [read more](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Folder-Structure)
-* `Plugins` allow you to customize how tests are loaded, [read more](https://docs.cypress.io/plugins/index.html)
+* `e2e` holds the actual test files, [read more](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Folder-Structure)
+* `Plugins` allows you to customize how tests are loaded, [read more](https://docs.cypress.io/plugins/index.html)
 * `Support` file runs before all tests and is a great place to write or load additional custom commands, [read more](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Support-file)
 
 ## Structural Files :card_file_box:
 These files hold settings for the Cypress Test Runner.
 * [../cypress.json](https://github.com/arthurboeck/poc-cypress-e2e/blob/master/cypress,config.js) you can configure project options, [read more](https://docs.cypress.io/guides/references/configuration.html#Options)
-* [../package.json](https://github.com/arthurboeck/poc-cypress-e2e/blob/master/package.json) hold settings for managing the project's dependencies, scripts, version and a whole lot more, [read more](https://dev.to/easybuoy/understanding-the-package-json-file-3fdg)
+* [../package.json](https://github.com/arthurboeck/poc-cypress-e2e/blob/master/package.json) hold settings for managing the project's dependencies, scripts, version and more, [read more](https://dev.to/easybuoy/understanding-the-package-json-file-3fdg)
 
 ## More Information :sparkles:
 * https://github.com/cypress-io
