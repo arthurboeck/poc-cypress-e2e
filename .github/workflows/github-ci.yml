@@ -28,7 +28,7 @@ jobs:
         if: always()
         with:
           name: eslint-report
-          path: lint-report.html
+          path: eslint-report.html
           if-no-files-found: ignore
 
   test:
