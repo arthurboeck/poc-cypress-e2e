@@ -1,21 +1,18 @@
-import { routeFakeUsersApi, } from "../../support/routes";
+import { routeFakeUsersApi } from '../../support/routes';
 
-describe('Delete Services', { tags: ['@api', '@smoke'] }, () => {
+describe('Delete Services', { tags: ['@api', '@smoke'] }, function () {
+  before(function () {
+    cy.consoleErrosOff();
+  });
 
-    beforeEach(() => {
-        cy.consoleErrosOff();
+  it('Delete User', function () {
+    const id = 1;
+
+    cy.request({
+      method: 'DELETE',
+      url: `${routeFakeUsersApi}/${id}`,
+    }).then(response => {
+      expect(response.status).to.eq(200);
     });
-
-    it('Delete User', () => {
-
-        var id = 1
-
-        cy.request({
-            method: 'DELETE',
-            url: routeFakeUsersApi + "/" + id
-        }).then((response) => {
-            expect(response.status).to.eq(200)
-        })
-
-    })
+  });
 });

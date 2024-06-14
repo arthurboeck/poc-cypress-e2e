@@ -1,10 +1,10 @@
 // ***********************************************
 // This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
+// Create various custom commands and overwrite
+// Existing commands.
 //
 // For more comprehensive examples of custom
-// commands please read more here:
+// Commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
 //
@@ -25,14 +25,15 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('consoleErrosOff', () => {
-    Cypress.on('uncaught:exception', (err, runnable) => {
-        // returning false here prevents Cypress from
-        // failing the test
-        return false
-    })
-})
+  Cypress.on(
+    'uncaught:exception',
+    () =>
+      // Returning false here prevents Cypress from
+      // Failing the test
+      false,
+  );
+});
 
-Cypress.Commands.add('clickFirstLine',() => {
-    cy.get(':nth-child(1) > :nth-child(2) > .only-desktops > a.btn').click()
-})
-
+Cypress.Commands.add('clickFirstLine', () => {
+  cy.get(':nth-child(1) > :nth-child(2) > .only-desktops > a.btn').click();
+});
