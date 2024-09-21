@@ -21,14 +21,17 @@ jobs:
         run: npm install
 
       - name: ESLint
-        run: npm run eslint
+        run: npm run build:lint
+
+      - name: Prettier
+        run: npm run build:prettier:check
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         if: always()
         with:
           name: eslint-report
-          path: lint-report.html
+          path: eslint-report.html
           if-no-files-found: ignore
 
   test:
@@ -48,7 +51,7 @@ jobs:
 
         # Runs 3 copies of the current job in parallel
         containers: [1, 2, 3, 4, 5, 6]
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4

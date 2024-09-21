@@ -1,33 +1,30 @@
-import { routeFakeUsersApi, } from "../../support/routes";
 import { faker } from '@faker-js/faker/locale/en';
+import { routeFakeUsersApi } from '../../support/routes';
 
-describe('PUT Services', () => {
+describe('PUT Services', { tags: ['@api'] }, function () {
+  before(function () {
+    cy.consoleErrorsOff();
+  });
 
-    beforeEach(() => {
-        cy.consoleErrosOff();
+  it('Post User', function () {
+    const id = 1,
+      newId = faker.number.int(100),
+      password = faker.internet.password(),
+      username = faker.internet.userName();
+
+    cy.request({
+      method: 'PUT',
+      url: `${routeFakeUsersApi}/${id}`,
+      body: {
+        ID: newId,
+        UserName: username,
+        Password: password,
+      },
+    }).then(response => {
+      expect(response.status).to.eq(200);
+      expect(response.body.id).to.eq(newId);
+      expect(response.body.userName).to.eq(username);
+      expect(response.body.password).to.eq(password);
     });
-
-    it('Post User', () => {
-
-        var id = 1
-        var newId = faker.number.int(100)
-        var username = faker.internet.userName()
-        var password = faker.internet.password()
-
-        cy.request({
-            method: 'PUT',
-            url: routeFakeUsersApi + "/" + id,
-            body: {
-                ID: newId,
-                UserName: username,
-                Password: password
-            }
-        }).then((response) => {
-            expect(response.status).to.eq(200)
-            expect(response.body.id).to.eq(newId)
-            expect(response.body.userName).to.eq(username)
-            expect(response.body.password).to.eq(password)
-        })
-
-    })
+  });
 });
