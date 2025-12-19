@@ -27,12 +27,13 @@ jobs:
         run: npm run build:prettier:check
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v6
         if: always()
         with:
           name: eslint-report
           path: eslint-report.html
           if-no-files-found: ignore
+          overwrite: true
 
   test:
     name: Cypress Run
@@ -74,17 +75,17 @@ jobs:
 
       # Upload videos and screenshots as artifacts
       - name: Upload Image Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v6
         if: always()
         with:
-          name: cypress-screenshots
+          name: cypress-screenshots-${{ strategy.job-index }}
           path: cypress/screenshots
           if-no-files-found: ignore
 
       - name: Upload Video Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v6
         if: always()
         with:
-          name: cypress-videos
+          name: cypress-videos-${{ strategy.job-index }}
           path: cypress/videos
           if-no-files-found: ignore
