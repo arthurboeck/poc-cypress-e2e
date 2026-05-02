@@ -27,6 +27,8 @@ module.exports = defineConfig({
       const { plugin } = require('@cypress/grep/plugin');
       plugin(config);
 
+      require('@cypress/grep/src/plugin')(config);
+
       return config;
     },
   },
