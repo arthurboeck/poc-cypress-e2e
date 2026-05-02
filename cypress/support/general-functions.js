@@ -14,7 +14,7 @@ export function documentFormat(documento) {
   //Remove tudo o que não é dígito
   documento = documento.replace(/\D/g, '');
 
-  if (documento.length <= 11) {
+  if (documento.length < 14) {
     //CPF
     documento = formatCpf(documento, { pad: true });
   } else {
