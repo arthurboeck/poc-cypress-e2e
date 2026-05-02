@@ -10,7 +10,7 @@ describe('PUT Services', { tags: ['@api'] }, function () {
     const id = 1,
       newId = faker.number.int(100),
       password = faker.internet.password(),
-      username = faker.internet.userName();
+      username = faker.internet.username();
 
     cy.request({
       method: 'PUT',
