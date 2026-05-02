@@ -1,20 +1,19 @@
 import globals from 'globals';
-import pluginCypress from 'eslint-plugin-cypress/flat';
+import pluginCypress from 'eslint-plugin-cypress';
 import pluginJs from '@eslint/js';
 import pluginMocha from 'eslint-plugin-mocha';
 
 export default [
   pluginJs.configs.recommended,
-  pluginCypress.configs.globals,
-  pluginMocha.configs.flat.recommended,
+  pluginMocha.configs.recommended,
   {
     ignores: ['cypress.config.js', 'cypress/plugins/index.js'],
   },
   {
     languageOptions: {
       globals: {
-        ...globals.browser,
         ...globals.node,
+        ...pluginCypress.configs.globals.languageOptions.globals,
       },
     },
   },
