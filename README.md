@@ -1,8 +1,8 @@
 # POC - Cypress Interface and Service Tests
 
-Repository build for automated tests using cypress for interfaces and services.
+This repository contains automated tests with Cypress for UI flows and HTTP (service) checks.
 
-You can check the executions and artifacts on [Cypress Dashboard Executions](https://dashboard.cypress.io/projects/fnss6o/runs)
+You can check executions and artifacts on [Cypress Dashboard — project fnss6o](https://dashboard.cypress.io/projects/fnss6o/runs).
 
 ![CI](https://github.com/arthurboeck/poc-cypress-e2e/workflows/CI/badge.svg?branch=master)
 [![Cypress Dashboard][dashboard badge]][dashboard url]
@@ -17,12 +17,12 @@ You can check the executions and artifacts on [Cypress Dashboard Executions](htt
 
 - [Node](https://nodejs.org/en/docs/)
 - [Npm](https://docs.npmjs.com/)
-- [Brazilian Utils v1.0.0-rc.12](https://brazilian-utils.com.br/#/getting-started)
-- [Cypress v13.11.0](https://docs.cypress.io/guides/getting-started/installing-cypress.html)
-- [Cypress Grep v4.0.2](https://github.com/cypress-io/cypress/tree/develop/npm/grep)
-- [Cypress ESLint v3.3.0](https://github.com/cypress-io/eslint-plugin-cypress)
-- [ESLint v9.5.0](https://eslint.org/docs/latest/use/getting-started)
-- [Faker JS v8.4.1](https://github.com/faker-js/faker)
+- [Brazilian Utils ^2.3.0](https://brazilian-utils.com.br/#/getting-started)
+- [Cypress ^15.14.2](https://docs.cypress.io/guides/getting-started/installing-cypress.html)
+- [@cypress/grep ^6.0.0](https://www.npmjs.com/package/@cypress/grep)
+- [eslint-plugin-cypress ^6.2.0](https://github.com/cypress-io/eslint-plugin-cypress)
+- [ESLint ^10.0.3](https://eslint.org/docs/latest/use/getting-started)
+- [Faker JS ^10.4.0](https://github.com/faker-js/faker)
 
 # Step by Step :pencil:
 
@@ -52,10 +52,21 @@ npm test
 
 ## Running Cypress Tests By Tags :rocket:
 
-The following command will run all tests with the tag @api, you can read more [here](https://github.com/cypress-io/cypress/tree/develop/npm/grep#filter-with-tags).
+Tags are declared on `describe` / `it` via the `tags` option (for example `{ tags: ['@api'] }`).  
+`@cypress/grep` reads filter options from [exposed config](https://docs.cypress.io/app/references/configuration#expose) (`cypress.config.js` → `expose`, or CLI `--expose`), not from `--env`. See [@cypress/grep](https://www.npmjs.com/package/@cypress/grep).
+
+Scripts defined in `package.json`:
 
 ```shell
-npm run test -- --env grepTags=@api
+npm run test:api
+npm run test:web
+npm run test:debug
+```
+
+Equivalent example (tag `@api`):
+
+```shell
+npm run test -- --expose grepTags=@api
 ```
 
 ## Debugging :bug:
