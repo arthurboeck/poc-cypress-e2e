@@ -26,7 +26,7 @@ You can check executions and artifacts on [Cypress Dashboard — project fnss6o]
 
 # Step by Step :pencil:
 
-## Clonning the Project :art:
+## Cloning the Project :art:
 
 ```shell
 git clone https://github.com/arthurboeck/poc-cypress-e2e.git
@@ -100,7 +100,7 @@ These folders hold end-to-end tests and supporting files for the Cypress Test Ru
 
 These files hold settings for the Cypress Test Runner.
 
-- [../cypress.json](https://github.com/arthurboeck/poc-cypress-e2e/blob/master/cypress,config.js) you can configure project options, [read more](https://docs.cypress.io/guides/references/configuration.html#Options)
+- [../cypress.config.js](https://github.com/arthurboeck/poc-cypress-e2e/blob/master/cypress.config.js) you can configure project options, [read more](https://docs.cypress.io/guides/references/configuration.html#Options)
 - [../package.json](https://github.com/arthurboeck/poc-cypress-e2e/blob/master/package.json) hold settings for managing the project's dependencies, scripts, version and more, [read more](https://dev.to/easybuoy/understanding-the-package-json-file-3fdg)
 
 ## More Information :sparkles:

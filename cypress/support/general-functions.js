@@ -1,4 +1,4 @@
-import { formatCPF, formatCNPJ } from '@brazilian-utils/brazilian-utils';
+import { formatCpf, formatCnpj } from '@brazilian-utils/brazilian-utils';
 // GENERIC FUNCTIONS
 
 //Format currency
@@ -14,12 +14,12 @@ export function documentFormat(documento) {
   //Remove tudo o que não é dígito
   documento = documento.replace(/\D/g, '');
 
-  if (documento.length < 14) {
+  if (documento.length <= 11) {
     //CPF
-    documento = formatCPF(documento, { pad: true });
+    documento = formatCpf(documento, { pad: true });
   } else {
     //CNPJ
-    documento = formatCNPJ(documento, { pad: true });
+    documento = formatCnpj(documento, { pad: true });
   }
   return documento;
 }

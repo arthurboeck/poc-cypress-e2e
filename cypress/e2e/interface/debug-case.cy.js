@@ -6,7 +6,7 @@ describe('Debug Application', { tags: ['@web', '@debug'] }, function () {
     cy.consoleErrorsOff();
   });
 
-  it('Debug Application - Costumer Edit', function () {
+  it('Debug Application - Customer Edit', function () {
     cy.accessPage();
     cy.clickFirstLine();
     cy.get('input[id="field-customerName"]').clear().type(faker.person.firstName());
@@ -14,12 +14,12 @@ describe('Debug Application', { tags: ['@web', '@debug'] }, function () {
     cy.get('input[id="field-contactFirstName"]').clear().type(faker.person.firstName());
     cy.get('input[id="field-phone"]').clear().type(faker.phone.number());
 
+    cy.intercept('POST', routePostCustomer).as('postCustomer');
     cy.get('[id="form-button-save"]').click();
 
     // Bellow command enables debugging in browser dev tools.
     // To inspect the vars from xhr, type it in the browser console.
     // Debugger
-    cy.intercept('POST', routePostCustomer).as('postCustomer');
     cy.wait('@postCustomer');
 
     cy.get('[id="report-success"]').should('be.visible');

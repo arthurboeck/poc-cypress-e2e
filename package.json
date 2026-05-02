@@ -9,7 +9,6 @@
     "build:prettier:format": "npx prettier . --write",
     "start": "npx cypress open",
     "test": "npx cypress run --browser chrome",
-    "stop": "npm stop",
     "test:api": "npm run test -- --expose grepTags=@api",
     "test:web": "npm run test -- --expose grepTags=@web",
     "test:debug": "npm run test -- --expose grepTags=@debug"

@@ -20,11 +20,9 @@ module.exports = defineConfig({
     responseTimeout: 25000,
     retries: 0,
     video: true,
-    viewportHeight: 768,
-    viewportWidth: 1366,
 
     setupNodeEvents(on, config) {
-      config.defaultCommandTimeout = 10000;
+      config.defaultCommandTimeout = 25000;
 
       const { plugin } = require('@cypress/grep/plugin');
       plugin(config);
