@@ -1,6 +1,11 @@
 const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
+  // @cypress/grep reads grep* options from `expose` (CLI --expose or this block), not from e2e.env
+  expose: {
+    grepFilterSpecs: true,
+    grepOmitFiltered: true,
+  },
   e2e: {
     blockHosts: ['*fonts.googleapis.com'],
     browser: 'chrome',
@@ -18,15 +23,11 @@ module.exports = defineConfig({
     viewportHeight: 768,
     viewportWidth: 1366,
 
-    env: {
-      grepFilterSpecs: true,
-      grepOmitFiltered: true,
-    },
-
     setupNodeEvents(on, config) {
       config.defaultCommandTimeout = 10000;
 
-      require('@cypress/grep/src/plugin')(config);
+      const { plugin } = require('@cypress/grep/plugin');
+      plugin(config);
 
       return config;
     },

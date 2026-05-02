@@ -13,12 +13,8 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-// Import commands.js using ES2015 syntax:
 import './commands';
 import './access';
-import registerCypressGrep from '@cypress/grep/src/support';
-registerCypressGrep();
+import { register } from '@cypress/grep';
 
-// Alternatively you can use CommonJS syntax:
-require('./commands');
-// Require('cypress-xpath')
+register();
