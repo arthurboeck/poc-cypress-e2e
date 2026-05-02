@@ -10,9 +10,9 @@
     "start": "npx cypress open",
     "test": "npx cypress run --browser chrome",
     "stop": "npm stop",
-    "test:api": "npm run test -- --env grepTags=@api",
-    "test:web": "npm run test -- --env grepTags=@web",
-    "test:debug": "npm run test -- --env grepTags=@debug"
+    "test:api": "npm run test -- --expose grepTags=@api",
+    "test:web": "npm run test -- --expose grepTags=@web",
+    "test:debug": "npm run test -- --expose grepTags=@debug"
   },
   "repository": {
     "type": "git",
@@ -21,15 +21,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@brazilian-utils/brazilian-utils": "^1.0.0-rc.12",
-    "@cypress/grep": "^4.0.2",
-    "@eslint/js": "^9.5.0",
-    "@faker-js/faker": "^8.4.1",
-    "cypress": "^13.11.0",
-    "eslint": "^9.5.0",
-    "eslint-plugin-cypress": "^3.3.0",
-    "eslint-plugin-mocha": "^10.4.3",
-    "globals": "^15.4.0",
-    "prettier": "^3.3.2"
+    "@brazilian-utils/brazilian-utils": "^2.3.0",
+    "@cypress/grep": "^6.0.0",
+    "@eslint/js": "^10.0.1",
+    "@faker-js/faker": "^10.4.0",
+    "cypress": "^15.14.2",
+    "eslint": "^10.0.3",
+    "eslint-plugin-cypress": "^6.2.0",
+    "eslint-plugin-mocha": "^11.2.0",
+    "globals": "^17.4.0",
+    "prettier": "^3.8.1"
   }
 }
