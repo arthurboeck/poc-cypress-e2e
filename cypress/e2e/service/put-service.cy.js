@@ -6,7 +6,7 @@ describe('PUT Services', { tags: ['@api'] }, function () {
     cy.consoleErrorsOff();
   });
 
-  it('Post User', function () {
+  it('Put User', function () {
     const id = 1,
       newId = faker.number.int(100),
       password = faker.internet.password(),
