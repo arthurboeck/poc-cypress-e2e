@@ -8,7 +8,7 @@ describe('Post Services', { tags: ['@api'] }, function () {
 
   it('Post User', function () {
     const id = faker.number.int(100),
-      username = faker.internet.userName(),
+      username = faker.internet.username(),
       password = faker.internet.password();
 
     cy.request({

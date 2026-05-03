@@ -18,9 +18,9 @@ describe('Open Application', { tags: ['@web'] }, function () {
     cy.get('input[id="field-contactFirstName"]').clear().type(faker.person.firstName());
     cy.get('input[id="field-phone"]').clear().type(faker.phone.number());
 
+    cy.intercept('POST', routePostCustomer).as('postCustomer');
     cy.get('[id="form-button-save"]').click();
 
-    cy.intercept('POST', routePostCustomer).as('postCustomer');
     cy.wait('@postCustomer');
 
     cy.get('[id="report-success"]').should('be.visible');
