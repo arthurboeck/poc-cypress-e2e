@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "POC - Cypres Interface and Service Tests",
   "main": "index.js",
+  "engines": {
+    "node": "^22.0.0 || ^24.0.0 || >=26.0.0"
+  },
   "scripts": {
     "build:lint": "npx eslint --format html --output-file ./eslint-report.html",
     "build:prettier:check": "npx prettier . --check",
