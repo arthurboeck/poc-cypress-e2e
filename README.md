@@ -17,12 +17,12 @@ You can check executions and artifacts on [Cypress Dashboard — project fnss6o]
 
 - [Node](https://nodejs.org/en/docs/)
 - [Npm](https://docs.npmjs.com/)
-- [Brazilian Utils ^2.3.0](https://brazilian-utils.com.br/#/getting-started)
-- [Cypress ^15.14.2](https://docs.cypress.io/guides/getting-started/installing-cypress.html)
-- [@cypress/grep ^6.0.0](https://www.npmjs.com/package/@cypress/grep)
-- [eslint-plugin-cypress ^6.2.0](https://github.com/cypress-io/eslint-plugin-cypress)
-- [ESLint ^10.0.3](https://eslint.org/docs/latest/use/getting-started)
-- [Faker JS ^10.4.0](https://github.com/faker-js/faker)
+- [Brazilian Utils ^2.4.0](https://brazilian-utils.com.br/#/getting-started)
+- [Cypress ^16.1.0](https://docs.cypress.io/guides/getting-started/installing-cypress.html)
+- [@cypress/grep ^7.0.0](https://www.npmjs.com/package/@cypress/grep)
+- [eslint-plugin-cypress ^7.0.2](https://github.com/cypress-io/eslint-plugin-cypress)
+- [ESLint ^10.10.0](https://eslint.org/docs/latest/use/getting-started)
+- [Faker JS ^10.6.0](https://github.com/faker-js/faker)
 
 # Step by Step :pencil:
 

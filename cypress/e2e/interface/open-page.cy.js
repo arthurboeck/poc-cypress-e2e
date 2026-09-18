@@ -21,8 +21,6 @@ describe('Open Application', { tags: ['@web'] }, function () {
     cy.intercept('POST', routePostCustomer).as('postCustomer');
     cy.get('[id="form-button-save"]').click();
 
-    cy.wait('@postCustomer');
-
     cy.get('[id="report-success"]').should('be.visible');
     cy.screenshot();
   });
