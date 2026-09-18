@@ -22,6 +22,7 @@ export default [
       'func-names': ['off'],
       'mocha/no-hooks': 'off',
       'prefer-arrow-callback': 'off',
+      'mocha/no-async-in-sync-tests': 'off',
     },
   },
 ];
