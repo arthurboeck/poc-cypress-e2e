@@ -20,15 +20,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@brazilian-utils/brazilian-utils": "^2.3.0",
-    "@cypress/grep": "^6.0.0",
+    "@brazilian-utils/brazilian-utils": "^2.4.0",
+    "@cypress/grep": "^7.0.0",
     "@eslint/js": "^10.0.1",
-    "@faker-js/faker": "^10.4.0",
-    "cypress": "^15.14.2",
-    "eslint": "^10.3.0",
-    "eslint-plugin-cypress": "^6.4.0",
-    "eslint-plugin-mocha": "^11.2.0",
-    "globals": "^17.6.0",
-    "prettier": "^3.8.3"
+    "@faker-js/faker": "^10.6.0",
+    "cypress": "^16.1.0",
+    "eslint": "^10.0.1",
+    "eslint-plugin-cypress": "^7.0.2",
+    "eslint-plugin-mocha": "^12.0.2",
+    "globals": "^17.12.0",
+    "prettier": "^3.9.8"
   }
 }
